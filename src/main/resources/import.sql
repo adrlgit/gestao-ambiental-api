@@ -1,0 +1,2 @@
+insert into item (registro, descricao, localidade, data_aquisicao) values ('NT0123', 'Queimadas', 'Amazonas', sysdate());
+insert into item (registro, descricao, localidade, data_aquisicao) values ('AU9875', 'cerrado', 'goias', sysdate());	
