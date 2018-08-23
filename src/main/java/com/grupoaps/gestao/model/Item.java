@@ -6,8 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Item {
@@ -20,12 +20,19 @@ public class Item {
 	private String registro;
 	
 	@NotEmpty
-	private String descricao;
+	private String nome;
 	
 	@NotEmpty
-	private String localidade;
+	private String tipoPapel;
+	
+	@NotEmpty
+	private String tipoUtencilios;
+			
+	@NotNull
+	private Integer notaPerfil;
 	
 	private LocalDate dataAquisicao;
+
 
 	public Long getId() {
 		return id;
@@ -43,21 +50,36 @@ public class Item {
 		this.registro = registro;
 	}
 
-	public String getDescricao() {
-		return descricao;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-	
-
-	public String getLocalidade() {
-		return localidade;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public void setLocalidade(String localidade) {
-		this.localidade = localidade;
+	public String getTipoPapel() {
+		return tipoPapel;
+	}
+
+	public void setTipoPapel(String tipoPapel) {
+		this.tipoPapel = tipoPapel;
+	}
+
+	public String getTipoUtencilios() {
+		return tipoUtencilios;
+	}
+
+	public void setTipoUtencilios(String tipoUtencilios) {
+		this.tipoUtencilios = tipoUtencilios;
+	}
+
+	public Integer getNotaPerfil() {
+		return notaPerfil;
+	}
+
+	public void setNotaPerfil(Integer notaPerfil) {
+		this.notaPerfil = notaPerfil;
 	}
 
 	public LocalDate getDataAquisicao() {
